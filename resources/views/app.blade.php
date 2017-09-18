@@ -23,7 +23,23 @@
 
     </head>
 
+
+    
+    
+    
+
+
+
     <body>
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="...">
+            </a>
+            </div>
+        </div>
+    </nav>
         <div class="container">
         
         @if($flash = session('message'))
@@ -31,6 +47,8 @@
                 {{ $flash }} 
             </div>
         @endif
+
+        <a href="{{ url('/articles') }}"><i class="fa fa-btn fa-user"></i>articles</a>
 
 
         <div class="panel-body">

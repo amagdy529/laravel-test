@@ -9,13 +9,16 @@ Route::get('articles/{id}', 'ArticlesController@show');
 
 Route::post('articles', 'ArticlesController@store');
 
-Route::get('articles/{id}/edit', 'ArticlesController@edit');
+Route::get('articles/{id}/edit', 'ArticlesController@edit')->name('articles.edit');
 
 Route::PATCH('articles/{id}', 'ArticlesController@update');
 
 Route::get('articles/{id}/delete', 'ArticlesController@listdelete');
 
-Route::post('articles/{id}/delete', 'ArticlesController@delete');
+// Route::post('articles/delete/{id}', 'ArticlesController@delete')->name('articles.delete');
+// Route::post('articles/delete/{id}', 'ArticlesController@delete')->name('articles.delete');
+Route::delete('/delete/{id}', 'ArticlesController@delete')->name('articles.delete');
+
 
 Route::get('articles/tags/{tag}', 'TagsController@index');
 

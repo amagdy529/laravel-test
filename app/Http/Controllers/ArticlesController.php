@@ -102,15 +102,18 @@ class ArticlesController extends Controller
     
         }
     
-        public function delete()
-    
-        {
-    
-            $article = Article::findOrFail($id);
-            $article->delete();
-            return redirect ('articles');
-    
-        }
+    public function delete($id)
+
+    {
+
+        $article = Article::findOrFail($id);
+        $article->delete();
+
+        // return redirect ('articles');
+        return redirect()->route('home')->with('message', 'Item deleted successfully.');
+        
+
+    }
 
 
 }

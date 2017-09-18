@@ -163,6 +163,10 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         
+        // laravel laralib scaffold library
+        Laralib\L5scaffold\GeneratorsServiceProvider::class,
+        
+        
      
 
         /*
